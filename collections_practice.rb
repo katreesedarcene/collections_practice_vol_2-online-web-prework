@@ -46,8 +46,8 @@ def remove_non_strings(notstring)
 end
 
 def count_elements(names)
-  x = ("names")
-  counted_elements = []
+  
+  
    
   names.each do |element|
     element[:count] = 0 
@@ -66,12 +66,28 @@ def count_elements(names)
  end
  
 def merge_data(keys, data)
-  
+  # {
+  #   [
+  #         {
+  #           :first_name => "blake",
+  #           :awesomeness => 10,
+  #               :height => "74",
+  #             :last_name => "johnson"
+  #       },
+  #         {
+  #           :first_name => "ashley",
+  #           :awesomeness => 9,
+  #               :height => 60,
+  #             :last_name => "dubs"
+  #       }
+  #   ]
+  # }
    a = 0 
    
    while a < keys.length 
      data.each do |element|
        element.each do |ke, val|
+         
          if keys[a].has_value?(ke)
             keys[a].merge!(val)
          end
